@@ -21,28 +21,48 @@ const ListItem = ({ children, title, reference}) => (
 );
 
   return (
-    <div className="flex items-center text-lg justify-between my-7 mx-auto max-w-full px-14 py-4 rounded-xl w-10/12 ">
+    <nav className="flex items-center text-lg justify-between my-7 mx-auto max-w-full px-14 py-4 rounded-xl w-10/12 ">
       {/* bg-zinc-800 shadow-xl */}
       <div className="flex items-center  h-5 gap-5">
-        <button className="leading-5 hover:text-indigo-500">Home</button>
+        <a
+          className="leading-5 hover:text-indigo-500 cursor-pointer"
+          href="proyectos"
+        >
+          Proyectos
+        </a>
         <Separator.Root
           className="bg-zinc-500 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px rotate-12"
           decorative
           orientation="vertical"
         />
-        <button className="leading-5 hover:text-indigo-500">Habilits</button>
+        <a
+          className="leading-5 hover:text-indigo-500 cursor-pointer"
+          href="habilits"
+        >
+          Habilits
+        </a>
         <Separator.Root
           className="bg-zinc-500 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px rotate-12"
           decorative
           orientation="vertical"
         />
-        <button className="leading-5 hover:text-indigo-500">About</button>
+        <a
+          className="leading-5 hover:text-indigo-500 cursor-pointer"
+          href="#about"
+        >
+          About
+        </a>
         <Separator.Root
           className="bg-zinc-500 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px rotate-12"
           decorative
           orientation="vertical"
         />
-        <button className="leading-5 hover:text-indigo-500">Contact</button>
+        <a
+          className="leading-5 hover:text-indigo-500 cursor-pointer"
+          href="#contact"
+        >
+          Contact
+        </a>
       </div>
       <NavigationMenu.Root className="flex items-center justify-center relative z-10">
         <NavigationMenu.List className="flex">
@@ -87,6 +107,6 @@ const ListItem = ({ children, title, reference}) => (
           <NavigationMenu.Viewport className="data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-2.5 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[6px] bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
         </div>
       </NavigationMenu.Root>
-    </div>
+    </nav>
   );
 };
